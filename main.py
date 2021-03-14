@@ -5,10 +5,10 @@ import csv
 import random
 import threading
 from PIL import Image, ImageTk
-
+from playsound import playsound
 # def createNewWindow():
 #   newWindow = tk.Toplevel(app)
-s =""
+s =''
 
 def show_result(): 
   outcome = choose()
@@ -17,6 +17,7 @@ def show_result():
 
 def choose(): 
   #  random choose 
+  playsound('SELECT.wav')
   data = open('foood.csv' ,newline="")
   reader = csv.reader(data)
   count= len(list(reader))
